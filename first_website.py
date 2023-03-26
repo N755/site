@@ -6,7 +6,7 @@ app = Flask(__name__)
 def about_me():
     return render_template('about_me.html')
 
-@app.route("/mypage/contact/", methods = ['POST'])
+@app.route("/mypage/contact")
 def contact():
     return render_template('contact.html')
 

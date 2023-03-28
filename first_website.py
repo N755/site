@@ -10,6 +10,14 @@ def about_me():
 def contact():
     return render_template('contact.html')
 
+@app.route('/mypage/contact', methods=['GET', 'POST'])
+def display_data():
+    if request.method == 'POST':
+        data = request.form
+        print(data)
+    return render_template('contact.html')
+    
+
 
 if __name__ == '__main__':
     app.run(debug=True)
